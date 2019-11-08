@@ -5,24 +5,24 @@ export default class Book extends React.Component {
   render() {
     return (
       <div className="Books-area">
-        <section className="images__">
+        <section className="book-image-area">
           <img
             className="Book-pics"
             src={
               this.props.volumeInfo.imageLinks
                 ? this.props.volumeInfo.imageLinks.thumbnail
-                : "NA"
+                : ""
             }
             alt="book pics"
           />
         </section>
-        <section className="desc__">
+        <section className="Book-info-area">
           <h1 className="Titles">{this.props.volumeInfo.title}</h1>
           <h2 className="Authors">
             Author:{" "}
             {this.props.volumeInfo.authors
               ? this.props.volumeInfo.authors[0]
-              : "NA"}
+              : "N/A"}
           </h2>
           <h3 className="Publisher">
             Publishing Company:{""}

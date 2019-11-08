@@ -3,6 +3,10 @@
   margin: 0;
 }
 
+.App {
+  background-color: lightgrey;
+}
+
 .Book-search-heading {
   color: white;
   background-color: royalblue;

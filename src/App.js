@@ -7,14 +7,11 @@ export default class App extends React.Component {
   state = {
     books: [],
     searchTerm: ""
-    // allBooks: [],
-    // categories: []
   };
 
   updateBooks = books => {
     this.setState({
       books: books
-      //allBooks: books
     });
   };
   render() {

@@ -4,8 +4,6 @@ import "./SearchInput.css";
 export default class SearchInput extends React.Component {
   onSubmitSearch = event => {
     event.preventDefault();
-    console.log("test");
-    //this.props.newSearch(event.target.Search.value)
     let googleBooksApiKey = "AIzaSyB0W_50RPy4A18TAA8mA5zHdGQ52QT6_Sw";
     let search = event.target.Search.value;
 
@@ -29,7 +27,6 @@ export default class SearchInput extends React.Component {
         <div className="Search-input-area">
           <label htmlFor="Search">Search:</label>
           <input type="text" name="Search" id="user-search" placeholder="" />
-          {/*<input className="Search-input" type="submit" value="Search " />*/}
           <button id="search-button">Search</button>
         </div>
       </form>
