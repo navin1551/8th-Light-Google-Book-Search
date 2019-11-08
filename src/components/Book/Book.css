@@ -1,0 +1,36 @@
+.Books-area {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid darkgray;
+}
+
+section {
+  display: inline-block;
+}
+
+.Book-pics {
+  width: 250px;
+  height: 450px;
+}
+
+.Titles {
+  margin-bottom: 15px;
+  font-size: 30px;
+}
+
+.Authors {
+  margin-bottom: 15px;
+  font-size: 22px;
+}
+
+.Prices {
+  margin-bottom: 20px;
+}
+
+#reading-list-button {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: darkgrey;
+}

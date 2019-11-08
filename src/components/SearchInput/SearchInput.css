@@ -1,0 +1,16 @@
+.Search-input-area {
+  background-color: grey;
+}
+
+label {
+  font-size: 30px;
+}
+
+#user-search {
+  margin-left: 10px;
+  margin-bottom: 5px;
+}
+
+#search-button {
+  margin-left: 5px;
+}
