@@ -2,6 +2,7 @@ import React from "react";
 import GoogleContext from "../../GoogleContext";
 import { Link } from "react-router-dom";
 import MyBooks from "../MyBooks/MyBooks";
+import "./ReadingList.css";
 
 export default class ReadingList extends React.Component {
   static contextType = GoogleContext;
@@ -18,9 +19,15 @@ export default class ReadingList extends React.Component {
     ));
     return (
       <div>
-        <h1>My Reading List</h1>
-        <Link to="/">Back To Search</Link>
-        <ul>{myReadingList}</ul>
+        <div className="my-reading-list-header">
+          <span id="my-reading-list-title">My Reading List</span>
+          <Link to="/" id="search-link">
+            Back To Search
+          </Link>
+        </div>
+        <div>
+          <ul>{myReadingList}</ul>
+        </div>
       </div>
     );
   }

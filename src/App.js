@@ -8,13 +8,14 @@ import "./App.css";
 export default class App extends React.Component {
   state = {
     books: [],
-    searchTerm: "",
-    readingList: []
+    readingList: [],
+    showNoResultsText: false
   };
 
   updateBooks = books => {
     this.setState({
-      books: books
+      books: books,
+      showNoResultsText: !books
     });
   };
 
@@ -30,6 +31,7 @@ export default class App extends React.Component {
     const contextValue = {
       books: this.state.books,
       readingList: this.state.readingList,
+      showNoResultsText: this.state.showNoResultsText,
       updateBooks: this.updateBooks,
       addToReadingList: this.addToReadingList
     };
@@ -37,6 +39,9 @@ export default class App extends React.Component {
     return (
       <GoogleContext.Provider value={contextValue}>
         <div className="App">
+          <div className="book-search-heading">
+            <h1 className="google-book-title">Google Book Search</h1>
+          </div>
           <main>
             <Route exact path="/" component={HomePage} />
             <Route path="/reading-list" component={ReadingList} />

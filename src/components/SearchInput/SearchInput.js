@@ -21,7 +21,6 @@ export default class SearchInput extends React.Component {
         return res.json();
       })
       .then(data => {
-        console.log(data);
         this.context.updateBooks(data.items);
       });
   };
@@ -33,7 +32,7 @@ export default class SearchInput extends React.Component {
           <input type="text" name="Search" id="user-search" placeholder="" />
           <button id="search-button">Search</button>
           <Link to="reading-list" id="reading-list-link">
-            Reading List
+            My Reading List
           </Link>
         </div>
       </form>

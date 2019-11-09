@@ -12,8 +12,10 @@ export default class MyBooks extends React.Component {
             alt="reading-list-images"
           />
           <p>Title: {this.props.title}</p>
-          <p>Author: {this.props.author}</p>
-          <p>Publisher: {this.props.publisher}</p>
+          <p>Author: {this.props.author ? this.props.author : "N/A"}</p>
+          <p>
+            Publisher: {this.props.publisher ? this.props.publisher : "N/A"}
+          </p>
         </li>
       </div>
     );

@@ -10,9 +10,6 @@ export default class HomePage extends React.Component {
   render() {
     return (
       <div className="home-page-area">
-        <div className="book-search-heading">
-          <h1 className="google-book-title">Google Book Search</h1>
-        </div>
         <div>
           <SearchBar updateBooks={this.context.updateBooks} />
           <BookList books={this.context.books} />

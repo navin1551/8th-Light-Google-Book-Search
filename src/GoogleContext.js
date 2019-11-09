@@ -2,7 +2,9 @@ import React from "react";
 
 const GoogleContext = React.createContext({
   books: [],
-  updateBooks: () => {}
+  readingList: [],
+  updateBooks: () => {},
+  addToReadingList: () => {}
 });
 
 export default GoogleContext;

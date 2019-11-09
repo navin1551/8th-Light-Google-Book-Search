@@ -9,6 +9,14 @@ export default class BookList extends React.Component {
     const books = this.context.books.map((book, i) => (
       <Book {...book} key={i} />
     ));
-    return <div>{books}</div>;
+    let noResultsMessage = this.context.showNoResultsText
+      ? "No Results, Try Again"
+      : "";
+    return (
+      <div>
+        {books}
+        <p>{noResultsMessage}</p>
+      </div>
+    );
   }
 }

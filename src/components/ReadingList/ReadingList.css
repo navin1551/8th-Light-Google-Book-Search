@@ -1,0 +1,20 @@
+.my-reading-list-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: gray;
+}
+
+#my-reading-list-title {
+  margin-top: 0;
+  margin-bottom: 5px;
+  font-size: 30px;
+  text-align: center;
+}
+
+#search-link {
+  text-decoration: none;
+  margin-left: 30px;
+  padding-top: 9px;
+  color: lightblue;
+}
