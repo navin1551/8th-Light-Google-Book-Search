@@ -25,9 +25,7 @@ export default class ReadingList extends React.Component {
             Back To Search
           </Link>
         </div>
-        <div>
-          <ul>{myReadingList}</ul>
-        </div>
+        <div>{myReadingList}</div>
       </div>
     );
   }

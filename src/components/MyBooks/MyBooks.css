@@ -1,8 +1,9 @@
 .my-book-area {
   width: 60%;
+  margin-top: 25px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   border: 1px solid black;
   list-style: none;
   background-color: whitesmoke;
