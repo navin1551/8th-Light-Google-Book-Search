@@ -50,7 +50,7 @@ export default class Book extends React.Component {
                 ? this.props.volumeInfo.publisher
                 : "N/A"}
             </h3>
-            <button id="reading-list-button">Add To Reading List</button>
+            <button id="reading-list-button">Add To My Reading List</button>
           </section>
         </form>
       </div>
