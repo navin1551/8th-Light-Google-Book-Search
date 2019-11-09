@@ -4,6 +4,9 @@ import { Link } from "react-router-dom";
 import "./SearchInput.css";
 
 export default class SearchInput extends React.Component {
+  state = {
+    noInputMessage: false
+  };
   static contextType = GoogleContext;
 
   onSubmitSearch = event => {
@@ -12,6 +15,12 @@ export default class SearchInput extends React.Component {
     let search = event.target.Search.value;
 
     let url = `https://www.googleapis.com/books/v1/volumes?q=${search}&maxResults=5&key=${googleBooksApiKey}`;
+
+    if (!search) {
+      this.setState({
+        noInputMessage: true
+      });
+    }
 
     fetch(url)
       .then(res => {
@@ -22,6 +31,9 @@ export default class SearchInput extends React.Component {
       })
       .then(data => {
         this.context.updateBooks(data.items);
+        this.setState({
+          noInputMessage: false
+        });
       })
       .catch(error => {
         console.log({ error });
@@ -29,6 +41,7 @@ export default class SearchInput extends React.Component {
   };
 
   render() {
+    let errorMessage = this.state.noInputMessage ? "Enter Search Value" : "";
     return (
       <div>
         <form onSubmit={this.onSubmitSearch}>
@@ -41,6 +54,7 @@ export default class SearchInput extends React.Component {
             </Link>
           </div>
         </form>
+        <div className="no-value-message-area">{errorMessage}</div>
       </div>
     );
   }

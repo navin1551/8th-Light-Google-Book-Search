@@ -14,10 +14,16 @@ export default class Book extends React.Component {
 
   addToReadingList = e => {
     e.preventDefault();
+    const newEntry = {
+      image: this.props.volumeInfo.imageLinks,
+      title: this.props.volumeInfo.title,
+      author: this.props.volumeInfo.authors,
+      publisher: this.props.volumeInfo.publisher
+    };
     let id = this.context.readingList.length + 1;
-    let { image, title, author, publisher } = this.state;
-    const newEntry = { id, image, title, author, publisher };
-    this.context.addToReadingList(newEntry);
+    //let { image, title, author, publisher } = this.props.volumeInfo;
+    //const newEntry = { id, image, title, author, publisher };
+    this.context.addToReadingList({ id, ...newEntry });
     console.log(this.context.readingList);
   };
 

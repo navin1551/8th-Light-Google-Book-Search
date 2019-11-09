@@ -22,3 +22,9 @@ label {
   color: lightblue;
   text-decoration: none;
 }
+
+.no-value-message-area {
+  font-size: 28px;
+  font-weight: bolder;
+  margin-top: 5%;
+}
