@@ -14,7 +14,7 @@ export default class App extends React.Component {
 
   updateBooks = books => {
     this.setState({
-      books: books,
+      books: books || [],
       showNoResultsText: !books
     });
   };
@@ -38,7 +38,7 @@ export default class App extends React.Component {
 
     return (
       <GoogleContext.Provider value={contextValue}>
-        <div className="App">
+        <div className="app">
           <div className="book-search-heading">
             <h1 className="google-book-title">Google Book Search</h1>
           </div>

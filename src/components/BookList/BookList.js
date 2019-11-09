@@ -11,12 +11,12 @@ export default class BookList extends React.Component {
       <Book {...book} key={i} />
     ));
     let noResultsMessage = this.context.showNoResultsText
-      ? "Try Again Later"
+      ? "No Results, Try Again!"
       : "";
     return (
       <div>
         {books}
-        <p>{noResultsMessage}</p>
+        <p id="no-results-message">{noResultsMessage}</p>
       </div>
     );
   }

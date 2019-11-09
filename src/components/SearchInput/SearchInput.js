@@ -30,16 +30,18 @@ export default class SearchInput extends React.Component {
 
   render() {
     return (
-      <form onSubmit={this.onSubmitSearch}>
-        <div className="Search-input-area">
-          <label htmlFor="Search">Search:</label>
-          <input type="text" name="Search" id="user-search" placeholder="" />
-          <button id="search-button">Search</button>
-          <Link to="reading-list" id="reading-list-link">
-            My Reading List
-          </Link>
-        </div>
-      </form>
+      <div>
+        <form onSubmit={this.onSubmitSearch}>
+          <div className="search-input-area">
+            <label htmlFor="Search">Search:</label>
+            <input type="text" name="Search" id="user-search" placeholder="" />
+            <button id="search-button">Search</button>
+            <Link to="reading-list" id="reading-list-link">
+              My Reading List
+            </Link>
+          </div>
+        </form>
+      </div>
     );
   }
 }

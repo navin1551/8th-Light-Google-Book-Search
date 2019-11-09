@@ -23,11 +23,11 @@ export default class Book extends React.Component {
 
   render() {
     return (
-      <div className="Books-area">
+      <div className="books-area">
         <form onSubmit={this.addToReadingList}>
           <section className="book-image-area">
             <img
-              className="Book-pics"
+              className="book-pics"
               src={
                 this.props.volumeInfo.imageLinks
                   ? this.props.volumeInfo.imageLinks.thumbnail
@@ -36,16 +36,16 @@ export default class Book extends React.Component {
               alt="book pics"
             />
           </section>
-          <section className="Book-info-area">
-            <h1 className="Titles">{this.props.volumeInfo.title}</h1>
-            <h2 className="Authors">
+          <section className="book-info-area">
+            <h1 className="titles">{this.props.volumeInfo.title}</h1>
+            <h2 className="authors">
               Author:{" "}
               {this.props.volumeInfo.authors
                 ? this.props.volumeInfo.authors[0]
                 : "N/A"}
             </h2>
-            <h3 className="Publisher">
-              Publisher:{""}
+            <h3 className="publisher">
+              Publisher:{" "}
               {this.props.volumeInfo.publisher
                 ? this.props.volumeInfo.publisher
                 : "N/A"}

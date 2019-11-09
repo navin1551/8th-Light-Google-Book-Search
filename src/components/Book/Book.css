@@ -1,4 +1,4 @@
-.Books-area {
+.books-area {
   margin-top: 25px;
   margin-bottom: 25px;
   display: flex;
@@ -19,25 +19,21 @@ section {
   display: inline-block;
 }
 
-.Book-pics {
+.book-pics {
   width: 250px;
   height: 400px;
   margin-top: 20px;
   border: 1px solid black;
 }
 
-.Titles {
+.titles {
   margin-bottom: 15px;
   font-size: 30px;
 }
 
-.Authors {
+.authors {
   margin-bottom: 15px;
   font-size: 22px;
-}
-
-.Prices {
-  margin-bottom: 20px;
 }
 
 #reading-list-button {
