@@ -20,7 +20,7 @@ export default class App extends React.Component {
   };
 
   addToReadingList = book => {
-    let currentReadingList = [...this.state.readingList];
+    let currentReadingList = this.state.readingList;
     currentReadingList.push(book);
     this.setState({
       readingList: currentReadingList

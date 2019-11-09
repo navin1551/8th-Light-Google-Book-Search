@@ -22,8 +22,12 @@ export default class SearchInput extends React.Component {
       })
       .then(data => {
         this.context.updateBooks(data.items);
+      })
+      .catch(error => {
+        console.log({ error });
       });
   };
+
   render() {
     return (
       <form onSubmit={this.onSubmitSearch}>

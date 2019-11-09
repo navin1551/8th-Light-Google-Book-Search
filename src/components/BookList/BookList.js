@@ -5,12 +5,13 @@ import "./BookList.css";
 
 export default class BookList extends React.Component {
   static contextType = GoogleContext;
+
   render() {
     const books = this.context.books.map((book, i) => (
       <Book {...book} key={i} />
     ));
     let noResultsMessage = this.context.showNoResultsText
-      ? "No Results, Try Again"
+      ? "Try Again Later"
       : "";
     return (
       <div>

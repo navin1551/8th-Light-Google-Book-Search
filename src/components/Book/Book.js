@@ -31,7 +31,7 @@ export default class Book extends React.Component {
               src={
                 this.props.volumeInfo.imageLinks
                   ? this.props.volumeInfo.imageLinks.thumbnail
-                  : ""
+                  : "N/A"
               }
               alt="book pics"
             />
