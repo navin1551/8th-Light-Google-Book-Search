@@ -5,10 +5,14 @@
   flex-direction: column;
   margin-left: auto;
   margin-right: auto;
-  border-bottom: 1px solid darkgray;
   width: 75%;
   border: 1px solid black;
   background-color: white;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
 }
 
 section {
@@ -19,6 +23,7 @@ section {
   width: 250px;
   height: 450px;
   margin-top: 20px;
+  border: 1px solid black;
 }
 
 .Titles {

@@ -5,8 +5,8 @@ import "./SearchBar.css";
 export default class SearchBar extends React.Component {
   render() {
     return (
-      <div>
-        <div className="Search-bar-area">
+      <div className="Search-bar-area">
+        <div>
           <SearchInput updateBooks={this.props.updateBooks} />
         </div>
       </div>

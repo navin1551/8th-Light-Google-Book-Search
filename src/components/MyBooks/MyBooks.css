@@ -1,0 +1,12 @@
+.my-book-area {
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  border: 1px solid black;
+  list-style: none;
+}
+
+#my-book-images {
+  margin-top: 10px;
+}

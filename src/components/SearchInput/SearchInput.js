@@ -1,7 +1,11 @@
 import React from "react";
+import GoogleContext from "../../GoogleContext";
+import { Link } from "react-router-dom";
 import "./SearchInput.css";
 
 export default class SearchInput extends React.Component {
+  static contextType = GoogleContext;
+
   onSubmitSearch = event => {
     event.preventDefault();
     let googleBooksApiKey = "AIzaSyB0W_50RPy4A18TAA8mA5zHdGQ52QT6_Sw";
@@ -18,7 +22,7 @@ export default class SearchInput extends React.Component {
       })
       .then(data => {
         console.log(data);
-        this.props.updateBooks(data.items);
+        this.context.updateBooks(data.items);
       });
   };
   render() {
@@ -28,6 +32,9 @@ export default class SearchInput extends React.Component {
           <label htmlFor="Search">Search:</label>
           <input type="text" name="Search" id="user-search" placeholder="" />
           <button id="search-button">Search</button>
+          <Link to="reading-list" id="reading-list-link">
+            Reading List
+          </Link>
         </div>
       </form>
     );

@@ -1,13 +1,16 @@
 * {
   text-align: center;
+}
+
+body {
   margin: 0;
 }
 
 .App {
-  background-color: lightgrey;
+  background-color: white;
 }
 
-.Book-search-heading {
+.book-search-heading {
   color: white;
   background-color: royalblue;
   font-size: 35px;

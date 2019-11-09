@@ -1,12 +1,15 @@
 import React from "react";
-import SearchBar from "./components/SearchBar/SearchBar";
-import BookList from "./components/BookList/BookList";
+import { Route } from "react-router-dom";
+import HomePage from "./components/HomePage/HomePage";
+import ReadingList from "./components/ReadingList/ReadingList";
+import GoogleContext from "./GoogleContext";
 import "./App.css";
 
 export default class App extends React.Component {
   state = {
     books: [],
-    searchTerm: ""
+    searchTerm: "",
+    readingList: []
   };
 
   updateBooks = books => {
@@ -14,17 +17,32 @@ export default class App extends React.Component {
       books: books
     });
   };
+
+  addToReadingList = book => {
+    let currentReadingList = [...this.state.readingList];
+    currentReadingList.push(book);
+    this.setState({
+      readingList: currentReadingList
+    });
+  };
+
   render() {
+    const contextValue = {
+      books: this.state.books,
+      readingList: this.state.readingList,
+      updateBooks: this.updateBooks,
+      addToReadingList: this.addToReadingList
+    };
+
     return (
-      <div className="App">
-        <div className="Book-search-heading">
-          <h1>Google Book Search</h1>
+      <GoogleContext.Provider value={contextValue}>
+        <div className="App">
+          <main>
+            <Route path="/" component={HomePage} />
+            <Route path="/reading-list" component={ReadingList} />
+          </main>
         </div>
-        <main>
-          <SearchBar updateBooks={this.updateBooks} />
-          <BookList books={this.state.books} />
-        </main>
-      </div>
+      </GoogleContext.Provider>
     );
   }
 }

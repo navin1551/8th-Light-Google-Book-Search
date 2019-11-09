@@ -1,5 +1,6 @@
 .Search-input-area {
   background-color: grey;
+  margin-top: 0;
 }
 
 label {
@@ -13,4 +14,10 @@ label {
 
 #search-button {
   margin-left: 5px;
+}
+
+#reading-list-link {
+  margin-left: 30px;
+  color: lightblue;
+  text-decoration: none;
 }
