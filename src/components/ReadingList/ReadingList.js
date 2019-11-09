@@ -1,5 +1,6 @@
 import React from "react";
 import GoogleContext from "../../GoogleContext";
+import { Link } from "react-router-dom";
 import MyBooks from "../MyBooks/MyBooks";
 
 export default class ReadingList extends React.Component {
@@ -18,6 +19,7 @@ export default class ReadingList extends React.Component {
     return (
       <div>
         <h1>My Reading List</h1>
+        <Link to="/">Back To Search</Link>
         <ul>{myReadingList}</ul>
       </div>
     );

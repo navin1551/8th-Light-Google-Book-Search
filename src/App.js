@@ -38,7 +38,7 @@ export default class App extends React.Component {
       <GoogleContext.Provider value={contextValue}>
         <div className="App">
           <main>
-            <Route path="/" component={HomePage} />
+            <Route exact path="/" component={HomePage} />
             <Route path="/reading-list" component={ReadingList} />
           </main>
         </div>
