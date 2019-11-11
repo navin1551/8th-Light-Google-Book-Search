@@ -21,10 +21,7 @@ export default class Book extends React.Component {
       publisher: this.props.volumeInfo.publisher
     };
     let id = this.context.readingList.length + 1;
-    //let { image, title, author, publisher } = this.props.volumeInfo;
-    //const newEntry = { id, image, title, author, publisher };
     this.context.addToReadingList({ id, ...newEntry });
-    console.log(this.context.readingList);
   };
 
   render() {
