@@ -5,14 +5,16 @@ import "./SearchInput.css";
 
 export default class SearchInput extends React.Component {
   state = {
+    query: "",
     noInputMessage: false
   };
+
   static contextType = GoogleContext;
 
   onSubmitSearch = event => {
     event.preventDefault();
     let googleBooksApiKey = "AIzaSyB0W_50RPy4A18TAA8mA5zHdGQ52QT6_Sw";
-    let search = event.target.Search.value;
+    let search = this.state.query;
 
     let url = `https://www.googleapis.com/books/v1/volumes?q=${search}&maxResults=5&key=${googleBooksApiKey}`;
 
@@ -40,6 +42,12 @@ export default class SearchInput extends React.Component {
       });
   };
 
+  inputChangeHandle = event => {
+    this.setState({
+      query: event.target.value
+    });
+  };
+
   render() {
     let errorMessage = this.state.noInputMessage ? "Enter Search Value" : "";
     return (
@@ -47,7 +55,13 @@ export default class SearchInput extends React.Component {
         <form onSubmit={this.onSubmitSearch}>
           <div className="search-input-area">
             <label htmlFor="Search">Search:</label>
-            <input type="text" name="Search" id="user-search" placeholder="" />
+            <input
+              type="text"
+              name="Search"
+              id="user-search"
+              placeholder=""
+              onChange={this.inputChangeHandle}
+            />
             <button id="search-button">Search</button>
             <Link to="reading-list" id="reading-list-link">
               My Reading List
