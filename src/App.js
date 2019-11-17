@@ -1,7 +1,8 @@
 import React from "react";
-import { Route } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import HomePage from "./components/HomePage/HomePage";
 import ReadingList from "./components/ReadingList/ReadingList";
+import ErrorBoundary from "./ErrorBoundary";
 import GoogleContext from "./GoogleContext";
 import "./App.css";
 
@@ -50,8 +51,12 @@ export default class App extends React.Component {
             <h1 className="google-book-title">Google Book Search</h1>
           </div>
           <main>
-            <Route exact path="/" component={HomePage} />
-            <Route path="/reading-list" component={ReadingList} />
+            <ErrorBoundary>
+              <Switch>
+                <Route exact path="/" component={HomePage} />
+                <Route path="/reading-list" component={ReadingList} />
+              </Switch>
+            </ErrorBoundary>
           </main>
         </div>
       </GoogleContext.Provider>
