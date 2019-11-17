@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<div
+  className="home-page-area"
+>
+  <div>
+    <div
+      className="search-bar-area"
+    >
+      <div>
+        <div>
+          <form
+            onSubmit={[Function]}
+          >
+            <div
+              className="search-input-area"
+            >
+              <label
+                htmlFor="Search"
+              >
+                Search:
+              </label>
+              <input
+                id="user-search"
+                name="Search"
+                onChange={[Function]}
+                placeholder=""
+                type="text"
+              />
+              <button
+                id="search-button"
+              >
+                Search
+              </button>
+              <a
+                href="/reading-list"
+                id="reading-list-link"
+                onClick={[Function]}
+              >
+                My Reading List
+              </a>
+            </div>
+          </form>
+          <div
+            className="no-value-message-area"
+          >
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      data-testid="book-list"
+    >
+      <p
+        id="no-results-message"
+      >
+        
+      </p>
+    </div>
+  </div>
+</div>
+`;

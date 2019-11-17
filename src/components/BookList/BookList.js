@@ -16,7 +16,7 @@ export default class BookList extends React.Component {
       : "";
 
     return (
-      <div>
+      <div data-testid="book-list">
         {books}
         <p id="no-results-message">{noResultsMessage}</p>
       </div>

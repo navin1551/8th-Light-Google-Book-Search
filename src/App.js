@@ -7,7 +7,6 @@ import "./App.css";
 
 export default class App extends React.Component {
   state = {
-    query: "",
     books: [],
     readingList: [],
     showNoResultsText: false

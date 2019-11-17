@@ -26,7 +26,7 @@ export default class Book extends React.Component {
 
   render() {
     return (
-      <div className="books-area">
+      <div className="books-area" data-testid="book">
         <form onSubmit={this.addToReadingList}>
           <section className="book-image-area">
             <img

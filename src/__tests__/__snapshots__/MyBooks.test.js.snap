@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<div
+  className="my-book-area"
+>
+  <img
+    alt="reading-list-images"
+    id="my-book-images"
+  />
+  <p>
+    Title: 
+  </p>
+  <p>
+    Author: 
+    N/A
+  </p>
+  <p>
+    Publisher: 
+    N/A
+  </p>
+</div>
+`;

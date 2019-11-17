@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<div>
+  <div
+    className="my-reading-list-header"
+  >
+    <span
+      id="my-reading-list-title"
+    >
+      My Reading List
+    </span>
+    <a
+      href="/"
+      id="search-link"
+      onClick={[Function]}
+    >
+      Back To Search
+    </a>
+  </div>
+  <div />
+</div>
+`;
