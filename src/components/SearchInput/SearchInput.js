@@ -19,9 +19,13 @@ export default class SearchInput extends React.Component {
     let url = `https://www.googleapis.com/books/v1/volumes?q=${search}&maxResults=5&key=${googleBooksApiKey}`;
 
     if (!search) {
-      this.setState({
+      return this.setState({
         noInputMessage: true
       });
+    }
+
+    if (search.includes("&")) {
+      return this.context.specialCharError(search);
     }
 
     fetch(url)

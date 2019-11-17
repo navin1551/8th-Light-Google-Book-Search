@@ -7,6 +7,7 @@ import "./App.css";
 
 export default class App extends React.Component {
   state = {
+    query: "",
     books: [],
     readingList: [],
     showNoResultsText: false
@@ -27,13 +28,20 @@ export default class App extends React.Component {
     });
   };
 
+  specialCharError = () => {
+    this.setState({
+      showNoResultsText: true
+    });
+  };
+
   render() {
     const contextValue = {
       books: this.state.books,
       readingList: this.state.readingList,
       showNoResultsText: this.state.showNoResultsText,
       updateBooks: this.updateBooks,
-      addToReadingList: this.addToReadingList
+      addToReadingList: this.addToReadingList,
+      specialCharError: this.specialCharError
     };
 
     return (
