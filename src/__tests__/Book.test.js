@@ -6,10 +6,14 @@ import { BrowserRouter } from "react-router-dom";
 
 it("renders without crashing", () => {
   const div = document.createElement("div");
+  const volumeInfo = {
+    title: "Test Props"
+  };
+
   ReactDOM.render(
     shallow(
       <BrowserRouter>
-        <Book />
+        <Book volumeInfo={volumeInfo} />
       </BrowserRouter>
     ),
     div
